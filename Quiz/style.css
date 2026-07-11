@@ -1,0 +1,119 @@
+:root {
+  --body-bg: #ececec;
+  --bg-c: rgb(228, 228, 228);
+  --text: black;
+  --primary: #b3c3fa;
+  --options: rgb(243, 243, 243);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --text: black;
+}
+
+.darkmode {
+  --body-bg: #121212;
+  --bg-c: rgb(11, 11, 11);
+  --text: white;
+  --primary: #4f46e5;
+  --options: rgb(10, 10, 10);
+  --shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  --shadow-hover: 0 8px 9px rgba(79, 70, 229, 0.16);
+  --text: rgb(246, 246, 246);
+}
+
+body {
+  display: flex;
+  background: var(--body-bg);
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  margin: 0;
+  padding-top: 130px;
+  justify-content: start;
+  transition: all 0.3s;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+}
+
+.main {
+  background: var(--bg-c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 750px;
+  height: 35%;
+  margin: 25px;
+  box-shadow: var(--shadow);
+}
+
+.ques {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 23.5px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 5em;
+}
+
+.choice {
+  width: 200px;
+
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--options);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.choice:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  filter: brightness(0.95);
+}
+.lbl {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  background: var(--primary) /*rgb(255, 240, 103)*/;
+  font-weight: bold;
+  padding: 5px;
+  width: 25px;
+  height: 22px;
+  font-size: 1.5em;
+  border-radius: 42%;
+}
+
+.lbl {
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.result {
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  width: 50px;
+  height: 20px;
+}

@@ -1,0 +1,111 @@
+:root {
+  --bg-gr: linear-gradient(90deg, #ececec, #ececec );
+  --b-bg: #ececec;
+  --b-bg-t: #121212;
+  --bg: linear-gradient(90deg, rgba(59, 131, 246, 0.9), rgba(37, 100, 235,0.65));
+  --text: black;
+  --text-p: white;
+  --shadow:  0 4px 20px rgba(79, 70, 229, 0.3);
+  --circle-shadow: 0 0 50px 5px rgba(0, 195, 198, 0.919);
+  --circle-gr: radial-gradient(circle, rgba(0, 97, 177, 0.843) 0%, rgba(0, 51, 255, 0.65) 100%);
+}
+.darkmode {
+  --bg-gr: linear-gradient(90deg, #121212, #121212 );
+  --b-bg:  #121212;
+  --b-bg-t: #ececec;
+  --bg: linear-gradient(90deg, rgba(0, 0, 77, 0.9), rgba(8, 8, 44, 0.65));
+  --text: rgb(206, 206, 206);
+  --text-p: rgba(113, 113, 113, 0.773);
+  --shadow:  0 0 10px rgba(0, 0, 255, 0.2);
+  --circle-shadow: 0 0 50px 5px rgb(1, 74, 101);
+  --circle-gr: radial-gradient(circle, rgba(0, 8, 50, 0.8) 0%, rgba(0, 6, 30, 0.5) 100%);
+}
+
+
+
+
+/* The general header */
+
+#text {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+}
+
+
+#mainContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+  height: 70px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+
+  background: var(--bg);
+
+ 
+  font-size: 22px;
+  letter-spacing: 2px;
+
+ /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+ /* border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+}
+
+/*Navigation*/
+
+#nav {
+  display: flex;
+  gap: 10px;
+  margin-right: 50px ;
+}
+
+#nav div .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.3s;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 10px;
+  
+}
+
+#nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--b-bg);
+  transition: 0.3s;
+  width: 50px;
+  height: 50px;
+  font-size: 2.1em;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 20px;
+  padding: 20px;
+  
+}
+
+
+
+#nav div:hover .icon {
+  transform: translateY(35px);
+  background-color: var(--b-bg-t);
+  box-shadow: 0 0px 0px 10px var(--b-bg);
+  cursor: pointer;
+  color: var(--b-bg);
+  padding: 10px;
+}
+/*Nav (look up)*/
+/*end*/

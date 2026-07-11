@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="../More/header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Container-->
+    <div id="mainContainer">
+      <label id="text"> SCRIPT-CODING </label>
+      <div id="nav">
+        <div>
+          <i class="fa-jelly fa-regular fa-moon icon" id="dark"></i>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-house icon"
+            onclick="window.location.href = '../index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- /Header Container-->
+
+    <div class="main">
+      <div class="result"></div>
+      <div class="ques">What is the capital of ${}?</div>
+      <div class="choices">
+        <button class="choice">
+          <div class="letter">A</div>
+          <label class="lbl"></label>
+        </button>
+        <button class="choice">
+          <div class="letter">B</div>
+          <label class="lbl"></label>
+        </button>
+        <button class="choice">
+          <div class="letter">C</div>
+          <label class="lbl"></label>
+        </button>
+        <button class="choice">
+          <div class="letter">D</div>
+          <label class="lbl"></label>
+        </button>
+      </div>
+    </div>
+
+    <script src="../More/mode.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

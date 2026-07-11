@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <!-- The header style: -->
+    <link rel="stylesheet" href="../More/header.css" />
+    <!-- Main style: -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Libraries: -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Container-->
+    <div id="mainContainer">
+      <label id="text"> SCRIPT-CODING </label>
+      <div id="nav">
+        <div>
+          <i class="fa-jelly fa-regular fa-moon icon" id="dark"></i>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-house icon"
+            onclick="window.location.href = '../index.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- /Header Container-->
+    <div class="Container">
+      <div class="user">
+        <h2>You</h2>
+        <div class="chosen" id="chosuser"></div>
+        <div class="btns">
+          <button class="button userbtn" id="rock">
+            <i class="fa-solid fa-hand-back-fist btn"></i>
+          </button>
+          <button class="button userbtn" id="paper">
+            <i class="fa-solid fa-hand btn"></i>
+          </button>
+          <button class="button userbtn" id="scissor">
+            <i class="fa-solid fa-hand-scissors btn"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="result">
+        <label id="userRes" class="res">0</label>
+        <label class="res">-</label>
+        <label id="aiRes" class="res">0</label><br />
+      </div>
+
+      <div class="ai">
+        <h2>AI</h2>
+        <div class="chosen" id="chosai"></div>
+        <div class="btns">
+          <button class="notuser button aibtn" id="rock">
+            <i class="fa-solid fa-hand-back-fist btn" id="rock1"></i>
+          </button>
+          <button class="notuser button aibtn" id="paper">
+            <i class="fa-solid fa-hand btn" id="paper1"></i>
+          </button>
+          <button class="notuser button aibtn" id="scissor">
+            <i class="fa-solid fa-hand-scissors btn" id="scissor1"></i>
+          </button>
+        </div>
+        <p id="randomP"></p>
+      </div>
+    </div>
+    <label class="Ah"></label>
+    <!-- Dark mode script -->
+    <script src="../More/mode.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

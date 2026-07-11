@@ -1,0 +1,200 @@
+@keyframes rot {
+  from {
+    font-size: 0.1em;
+    transform: rotate(15deg) scale(0.5);
+    opacity: 0.5;
+  }
+  to {
+    font-size: 4em;
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+:root {
+  --body-bg: #ececec;
+  --bg-c: rgb(217, 217, 217);
+  --text: black;
+}
+
+.darkmode {
+  --body-bg: #121212;
+  --bg-c: rgb(14, 14, 14);
+  --text: white;
+}
+body {
+  display: flex;
+  background: var(--body-bg);
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+  justify-content: start;
+  transition: all 0.3s;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+body * {
+  color: var(--text);
+}
+.Container {
+  margin: 50px auto; /* changed from fixed margin */
+  background: var(--bg-c);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 75% fit-content;
+  min-width: 75%;
+  height: 45%;
+  flex-wrap: nowrap;
+  /* ← This fixes mobile */
+  max-width: 900px;
+  /* Some design */
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.user,
+.ai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  height: 90%;
+  gap: 20px;
+}
+
+.chosen {
+  background: transparent;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chosen i {
+  font-size: 4em;
+  position: relative;
+  color: var(--text);
+}
+.chosen i.animate {
+  animation: rot 0.25s ease-in-out;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.btns button {
+  width: 65px;
+  height: 65px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  border-radius: 50%;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.btns button:hover:not(.notuser) {
+  filter: brightness(0.5);
+  transform: rotate(-10deg) scale(1.06);
+  cursor: pointer;
+}
+
+.notuser:hover {
+  cursor: not-allowed;
+  filter: brightness(0.9);
+}
+
+.btn {
+  color: black;
+  font-size: 32px;
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background: transparent;
+  margin-bottom: 21%;
+}
+.Ah {
+  font-weight: bold;
+  font-size: 1.7em;
+  transition: all 0.3;
+}
+.res {
+  position: relative;
+  font-weight: bold;
+  font-size: 50px;
+}
+#randomP {
+  position: fixed;
+  font-size: bold;
+}
+/* Mobile*/
+/* Make everything smaller on small screens */
+@media (max-width: 650px) {
+  .Container {
+    margin: 30px 10px;
+    gap: 20px;
+    padding: 10px;
+    width: fit-content; /* This is the key */
+    min-width: 60%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  .btns button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn {
+    font-size: 25px;
+  }
+
+  #result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    gap: 12px;
+    min-width: 80p;
+  }
+}
+
+@media (max-width: 480px) {
+  .Container {
+    gap: 15px;
+  }
+
+  .btns button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn {
+    font-size: 22px;
+  }
+  .res {
+    top: 25%;
+  }
+}
